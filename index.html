@@ -11,13 +11,41 @@
         <header id="banner" class="body">
                 <h1><a href="./">Blog of Kovlala.fun</a></h1>
                 <nav><ul>
+                    <li><a href="./category/misc.html">misc</a></li>
                     <li><a href="./category/posts.html">posts</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="./pelicangithub-blog-setting.html">Pelican+Github Blog setting</a></h1>
+                    <h1 class="entry-title"><a href="./setup-static-page-blog-with-pelican-on-github-repo.html">Setup Static Page Blog with Pelican on Github Repo</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2021-07-20T00:00:00+08:00">
+                Published: Tue 20 July 2021
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="./author/kovlala.html">kovlala</a>
+        </address>
+<p>In <a href="./category/misc.html">misc</a>.</p>
+<p>tags: <a href="./tag/pelican.html">pelican</a> <a href="./tag/python.html">python</a> </p>
+</footer><!-- /.post-info --><h4>Setup blog with Pelican and Github project repo</h4>
+<p>Important: </p>
+<p><code>RELATIVE_URLS = True</code></p>
+<p>set above attribute in pelicanconf.py, otherwise css and links will be not work when served from GitHub.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="./pelicangithub-blog-setting.html" rel="bookmark"
+                           title="Permalink to Pelican+Github Blog setting">Pelican+Github Blog setting</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2021-07-17T00:00:00+08:00">
                 Published: Sat 17 July 2021
@@ -28,46 +56,12 @@
         </address>
 <p>In <a href="./category/posts.html">posts</a>.</p>
 <p>tags: <a href="./tag/blog.html">blog</a> <a href="./tag/pelican.html">pelican</a> </p>
-</footer><!-- /.post-info --><h3>Pelican Install</h3>
-<ul>
-<li>pip3 install pelican</li>
-<li>pip3 install markdown</li>
-</ul>
-<p>create a folder for blog</p>
-<p>cd to new blog folder</p>
-<p><code>pelican-quickstart</code></p>
-<div class="highlight"><pre><span></span><code><span class="n">Welcome</span> <span class="n">to</span> <span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span> <span class="n">v4</span><span class="o">.</span><span class="mf">6.0</span><span class="o">.</span>
-<span class="n">This</span> <span class="n">script</span> <span class="n">will</span> <span class="n">help</span> <span class="n">you</span> <span class="n">create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">Pelican</span><span class="o">-</span><span class="n">based</span> <span class="n">website</span><span class="o">.</span>
-
-<span class="n">Please</span> <span class="n">answer</span> <span class="n">the</span> <span class="n">following</span> <span class="n">questions</span> <span class="n">so</span> <span class="n">this</span> <span class="n">script</span> <span class="n">can</span> <span class="n">generate</span> <span class="n">the</span> <span class="n">files</span>
-<span class="n">needed</span> <span class="n">by</span> <span class="n">Pelican</span><span class="o">.</span>
-
-
-<span class="o">&gt;</span> <span class="n">Where</span> <span class="n">do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">create</span> <span class="n">your</span> <span class="n">new</span> <span class="n">web</span> <span class="n">site</span><span class="err">?</span> <span class="p">[</span><span class="o">.</span><span class="p">]</span>
-<span class="o">&gt;</span> <span class="n">What</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">title</span> <span class="n">of</span> <span class="n">this</span> <span class="n">web</span> <span class="n">site</span><span class="err">?</span> 
-<span class="o">&gt;</span> <span class="n">Who</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">author</span> <span class="n">of</span> <span class="n">this</span> <span class="n">web</span> <span class="n">site</span><span class="err">?</span> 
-<span class="o">&gt;</span> <span class="n">What</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">default</span> <span class="n">language</span> <span class="n">of</span> <span class="n">this</span> <span class="n">web</span> <span class="n">site</span><span class="err">?</span> <span class="p">[</span><span class="n">en</span><span class="p">]</span> <span class="n">zh</span>
-<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">specify</span> <span class="n">a</span> <span class="n">URL</span> <span class="n">prefix</span><span class="err">?</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span>   <span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
-<span class="o">&gt;</span> <span class="n">What</span> <span class="k">is</span> <span class="n">your</span> <span class="n">URL</span> <span class="n">prefix</span><span class="err">?</span> <span class="p">(</span><span class="n">see</span> <span class="n">above</span> <span class="n">example</span><span class="p">;</span> <span class="n">no</span> <span class="n">trailing</span> <span class="n">slash</span><span class="p">)</span>
-<span class="n">You</span> <span class="n">must</span> <span class="n">enter</span> <span class="n">something</span>
-<span class="o">&gt;</span> <span class="n">What</span> <span class="k">is</span> <span class="n">your</span> <span class="n">URL</span> <span class="n">prefix</span><span class="err">?</span> <span class="p">(</span><span class="n">see</span> <span class="n">above</span> <span class="n">example</span><span class="p">;</span> <span class="n">no</span> <span class="n">trailing</span> <span class="n">slash</span><span class="p">)</span> <span class="n">y</span>
-<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">enable</span> <span class="n">article</span> <span class="n">pagination</span><span class="err">?</span> <span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="n">y</span>
-<span class="o">&gt;</span> <span class="n">How</span> <span class="n">many</span> <span class="n">articles</span> <span class="n">per</span> <span class="n">page</span> <span class="n">do</span> <span class="n">you</span> <span class="n">want</span><span class="err">?</span> <span class="p">[</span><span class="mi">10</span><span class="p">]</span>
-<span class="o">&gt;</span> <span class="n">What</span> <span class="k">is</span> <span class="n">your</span> <span class="n">time</span> <span class="n">zone</span><span class="err">?</span> <span class="p">[</span><span class="n">Europe</span><span class="o">/</span><span class="n">Paris</span><span class="p">]</span> <span class="n">Asia</span><span class="o">/</span><span class="n">Shanghai</span>
-<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">generate</span> <span class="n">a</span> <span class="n">tasks</span><span class="o">.</span><span class="n">py</span><span class="o">/</span><span class="n">Makefile</span> <span class="n">to</span> <span class="n">automate</span> <span class="n">generation</span> <span class="ow">and</span> <span class="n">publishing</span><span class="err">?</span> <span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="n">y</span>
-<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">FTP</span><span class="err">?</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
-<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">SSH</span><span class="err">?</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
-<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">Dropbox</span><span class="err">?</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
-<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">S3</span><span class="err">?</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
-<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">Rackspace</span> <span class="n">Cloud</span> <span class="n">Files</span><span class="err">?</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
-<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">GitHub</span> <span class="n">Pages</span><span class="err">?</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
-
-<span class="n">Done</span><span class="o">.</span> <span class="n">Your</span> <span class="n">new</span> <span class="n">project</span> <span class="k">is</span> <span class="n">available</span> <span class="n">at</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">blog_china</span>
-</code></pre></div>
-
-<p>[参考]
-<a href="https://docs.getpelican.com/en/latest/">Pelican Docs</a></p>                </article>
-            </aside><!-- /#featured -->
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="./pelicangithub-blog-setting.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>links</h2>

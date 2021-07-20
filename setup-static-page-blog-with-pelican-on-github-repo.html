@@ -3,27 +3,45 @@
 <head>
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
-        <title>Blog of Kovlala.fun</title>
+        <title>Setup Static Page Blog with Pelican on Github Repo</title>
         <link rel="stylesheet" href="./theme/css/main.css" />
+        <meta name="description" content="Setup blog with Pelican and Github project repo Important: RELATIVE_URLS = True set above attribute in pelicanconf.py, otherwise css and links..." />
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
                 <h1><a href="./">Blog of Kovlala.fun</a></h1>
                 <nav><ul>
-                    <li><a href="./category/misc.html">misc</a></li>
+                    <li class="active"><a href="./category/misc.html">misc</a></li>
                     <li><a href="./category/posts.html">posts</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
-<h1>Archives for Blog of Kovlala.fun</h1>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./setup-static-page-blog-with-pelican-on-github-repo.html" rel="bookmark"
+           title="Permalink to Setup Static Page Blog with Pelican on Github Repo">Setup Static Page Blog with Pelican on Github Repo</a></h1>
+    </header>
 
-<dl>
-    <dt>Tue 20 July 2021</dt>
-    <dd><a href="./setup-static-page-blog-with-pelican-on-github-repo.html">Setup Static Page Blog with Pelican on Github Repo</a></dd>
-    <dt>Sat 17 July 2021</dt>
-    <dd><a href="./pelicangithub-blog-setting.html">Pelican+Github Blog setting</a></dd>
-</dl>
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2021-07-20T00:00:00+08:00">
+                Published: Tue 20 July 2021
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="./author/kovlala.html">kovlala</a>
+        </address>
+<p>In <a href="./category/misc.html">misc</a>.</p>
+<p>tags: <a href="./tag/pelican.html">pelican</a> <a href="./tag/python.html">python</a> </p>
+</footer><!-- /.post-info -->      <h4>Setup blog with Pelican and Github project repo</h4>
+<p>Important: </p>
+<p><code>RELATIVE_URLS = True</code></p>
+<p>set above attribute in pelicanconf.py, otherwise css and links will be not work when served from GitHub.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
 </section>
         <section id="extras" class="body">
                 <div class="blogroll">
